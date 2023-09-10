@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:ai_integrated_app/flutter_gen/';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LanguageSharedPreferences {
   static const String appLanguageCode = 'langCode';
@@ -27,8 +27,4 @@ class LanguageSharedPreferences {
     String languageCode = prefs.getString(appLanguageCode) ?? englishLanguage;
     return _locale(languageCode);
   }
-}
-
-AppLocalizations translation(BuildContext context) {
-  return AppLocalizations.of(context);
 }
